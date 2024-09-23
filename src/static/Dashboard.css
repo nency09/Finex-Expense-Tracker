@@ -1,0 +1,113 @@
+/* Keyframes for fade-in and zoom-in animation */
+@keyframes fadeInZoom {
+    0% {
+      opacity: 0;
+      transform: scale(0.8); /* Start slightly smaller */
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1); /* End at its original size */
+    }
+  }
+  
+  /* Apply the animation to the heading */
+  h1 {
+    animation: fadeInZoom 1s ease-in-out; /* 1s duration with ease-in-out effect */
+  }
+
+
+
+  /* Keyframes for fade-in and slide-up animation */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px); /* Start with a slight downward slide */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0); /* End in its original position */
+  }
+}
+
+/* Apply the animation to the heading */
+h2 {
+  animation: fadeInSlideUp 0.8s ease-in-out; /* 0.8s duration with ease-in-out effect */
+}
+
+/* Apply the animation to the budget items container */
+.budgets {
+  animation: fadeInSlideUp 1s ease-in-out; /* 1s duration with ease-in-out effect */
+}
+
+/* Apply the animation to each individual budget item */
+.budgets > div {
+  animation: fadeInSlideUp 1s ease-in-out;
+  animation-delay: 0.2s; /* Delays the start to add a smoother transition */
+  opacity: 0; /* Initial state */
+  animation-fill-mode: forwards; /* Ensures the end state is retained */
+}
+
+
+/* Keyframes for fade-in and slide-up animation */
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the fade-in slide animation */
+.fade-in-slide {
+  animation: fadeInSlide 1s ease-in-out;
+}
+
+/* Apply the fade-in slide-up animation */
+.fade-in-slide-up {
+  animation: fadeInSlideUp 0.8s ease-in-out forwards;
+  opacity: 0;
+}
+
+/* Ensuring fade-in elements appear in view */
+.fade-in {
+  opacity: 0;
+  animation: fadeInSlide 0.8s ease-in-out forwards;
+}
+
+.expense-charts {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 20px; /* Space between charts */
+  padding: 20px;
+  background: linear-gradient(135deg, gray, #d6e3f4); /* Light gradient */
+  border-radius: 10px; /* Rounded corners */
+}
+
+.chart {
+  background: white;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  padding: 20px; /* Padding inside the chart container */
+  /* background: linear-gradient(white); */
+}
+
+h2 {
+  text-align: center; /* Center align the chart titles */
+  color: #333; /* Darker text color */
+}
+
+
